@@ -4,10 +4,14 @@
 * \brief Pixel shader for blending the blurred bloom colors with the scene color.
 * Also performs tone mapping.
 *
-* \b NOW_OWNER: SJT           03/11/2008 <BR>
+* \Modifided Version of the RTW shader, forced it to use AdjustedColour to disable the blue. V2
+*
+* \b NOW_OWNER: dreamss				30/11/2012 <BR>
+* \b WAS_OWNER: SJT           03/11/2008 <BR>
 * \b WAS_OWNER: Hugh Malan    20/02/2008 <BR>
 *
-* (c) 2008 Realtime Worlds Ltd.
+* (c) 2008 Realtime Worlds Ltd. - RIP 9/16/2010
+* 
 ****************************************************************************************/
 
 #include "Common.usf"
