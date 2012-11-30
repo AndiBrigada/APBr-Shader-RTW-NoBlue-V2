@@ -111,18 +111,7 @@ half3 AdjustedColour = ColourAdjust(ToneMappedColour, UV);
 	// DISABLED: This wasn't used when the UI is shown (i.e. most of the time!),
 	// and costs a big chunk of time, so I've disabled it.
 	//half3 LinearColor = AdjustedColour * GammaColorScale + GammaOverlayColor;
-	//OutColor = float4(pow(saturate(LinearColor), GammaInverse), sceneColor.a);
-//	OutColor = float4(ToneMappedColour, sceneColor.a);
+//OutColor = float4(pow(saturate(LinearColor), GammaInverse), sceneColor.a);
+//OutColor = float4(ToneMappedColour, sceneColor.a);
 	OutColor = float4(AdjustedColour, sceneColor.a);
- //OutColor = float4(ToneMappedColour, FocusedSceneColorAndDepth.a);
-	if(SceneUV.x >= 0.4995 && SceneUV.x <= 0.5005 && SceneUV.y >= 0.499 && SceneUV.y <= 0.501)
-	{
-	OutColor = 1 - OutColor;
-	OutColor.a = sceneColor.a;
-	}
-	else if (SceneUV.x >= 0.4990 && SceneUV.x <= 0.5010 && SceneUV.y >= 0.498 && SceneUV.y <= 0.502)
-	{
-	OutColor = float4(255, 0, 0, sceneColor.a);
-	}
-	
 }
